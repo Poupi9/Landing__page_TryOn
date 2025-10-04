@@ -1,44 +1,78 @@
 import { TrendingDown, Heart, Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Benefits = () => {
-  const benefits = [
-    {
-      icon: TrendingDown,
-      title: "Réduction des retours",
-      description: "Diminuez significativement les retours clients liés aux problèmes de taille et d'ajustement.",
-      gradient: "from-accent/20 to-accent/5"
+  const { language } = useLanguage();
+
+  const content = {
+    fr: {
+      title: "Pourquoi c'est bon pour vous ?",
+      subtitle: "Des avantages business concrets qui transforment votre boutique en ligne",
+      benefits: [
+        {
+          icon: TrendingDown,
+          title: "Réduction des retours",
+          description:
+            "Diminuez significativement les retours clients liés aux problèmes de taille et d'ajustement.",
+          gradient: "from-accent/20 to-accent/5"
+        },
+        {
+          icon: Heart,
+          title: "Satisfaction client optimale",
+          description:
+            "Améliorez l'expérience d'achat et le taux de conversion grâce à la visualisation en temps réel.",
+          gradient: "from-primary/20 to-primary/5"
+        },
+        {
+          icon: Sparkles,
+          title: "Innovation différenciante",
+          description:
+            "Démarquez-vous de la concurrence avec une expérience shopping immersive et moderne.",
+          gradient: "from-accent/20 to-primary/5"
+        }
+      ]
     },
-    {
-      icon: Heart,
-      title: "Satisfaction client optimale",
-      description: "Améliorez l'expérience d'achat et le taux de conversion grâce à la visualisation en temps réel.",
-      gradient: "from-primary/20 to-primary/5"
-    },
-    {
-      icon: Sparkles,
-      title: "Innovation différenciante",
-      description: "Démarquez-vous de la concurrence avec une expérience shopping immersive et moderne.",
-      gradient: "from-accent/20 to-primary/5"
+    en: {
+      title: "Why it works for your business",
+      subtitle: "Tangible business benefits that elevate your online store",
+      benefits: [
+        {
+          icon: TrendingDown,
+          title: "Fewer returns",
+          description: "Significantly cut size and fit-related returns from your customers.",
+          gradient: "from-accent/20 to-accent/5"
+        },
+        {
+          icon: Heart,
+          title: "Happier shoppers",
+          description: "Boost satisfaction and conversions with real-time product visualisation.",
+          gradient: "from-primary/20 to-primary/5"
+        },
+        {
+          icon: Sparkles,
+          title: "Stand-out innovation",
+          description: "Differentiate your brand with an immersive, modern shopping experience.",
+          gradient: "from-accent/20 to-primary/5"
+        }
+      ]
     }
-  ];
+  } as const;
+
+  const t = content[language];
 
   return (
     <section className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Pourquoi c'est bon pour vous ?
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Des avantages business concrets qui transforment votre boutique en ligne
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{t.title}</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t.subtitle}</p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => {
+          {t.benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className="group p-8 rounded-2xl bg-card border border-border hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
