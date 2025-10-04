@@ -3,7 +3,10 @@ import logoTryon from "@/assets/titre-tryon.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-b from-background to-secondary/30">
+    <section
+      id="accueil"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-b from-background to-secondary/30 scroll-mt-24"
+    >
       <div className="max-w-6xl mx-auto text-center space-y-12">
         {/* Logo */}
         <div className="flex justify-center mb-8 animate-fade-in">

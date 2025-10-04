@@ -3,7 +3,10 @@ import { ArrowRight } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5">
+    <section
+      id="contact"
+      className="py-20 px-4 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 scroll-mt-24"
+    >
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground">
           Prêt à transformer votre boutique ?
