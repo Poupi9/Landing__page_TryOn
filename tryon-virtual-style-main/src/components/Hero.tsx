@@ -3,7 +3,10 @@ import logoTryon from "@/assets/titre-tryon.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-b from-background to-secondary/30">
+    <section
+      id="accueil"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-b from-background to-secondary/30"
+    >
       <div className="max-w-6xl mx-auto text-center space-y-12">
         {/* Logo */}
         <div className="flex justify-center mb-8 animate-fade-in">
@@ -31,13 +34,12 @@ const Hero = () => {
         </div>
         
         {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-          <Button variant="hero" size="xl" className="w-full sm:w-auto">
-            S'inscrire dès maintenant
-          </Button>
-          <Button variant="outline" size="xl" className="w-full sm:w-auto">
-            Voir la démo
-          </Button>
+        <div className="pt-8">
+          <div className="mx-auto max-w-sm">
+            <Button variant="hero" size="xl" className="w-full">
+              Participer à l'aventure
+            </Button>
+          </div>
         </div>
         
         {/* Video placeholder */}
