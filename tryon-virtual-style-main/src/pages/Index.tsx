@@ -4,14 +4,16 @@ import SocialProof from "@/components/SocialProof";
 import Benefits from "@/components/Benefits";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <LanguageToggle />
       <Hero />
       <ProductPresentation />
-      <SocialProof />
       <Benefits />
+      <SocialProof />
       <CTA />
       <Footer />
     </div>
