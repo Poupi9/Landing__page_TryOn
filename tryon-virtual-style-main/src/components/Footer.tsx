@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import logoImage from "@/assets/logo-tryon.png";
 
 const Footer = () => {
@@ -7,9 +9,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img 
-              src={logoImage} 
-              alt="TryOn Logo" 
+            <img
+              src={logoImage}
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
               className="h-12 w-12 object-contain"
             />
             <span className="text-xl font-bold text-foreground">TryOn</span>
@@ -17,18 +21,18 @@ const Footer = () => {
           
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">
+            <Link to="/mentions-legales" className="hover:text-primary transition-colors">
               Mentions légales
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            </Link>
+            <Link to="/politique-de-confidentialite" className="hover:text-primary transition-colors">
               Politique de confidentialité
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            </Link>
+            <Link to="/conditions-utilisation" className="hover:text-primary transition-colors">
               Conditions d'utilisation
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            </Link>
+            <Link to={{ pathname: "/", hash: "#contact" }} className="hover:text-primary transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
         
