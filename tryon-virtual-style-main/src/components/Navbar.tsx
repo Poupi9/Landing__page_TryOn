@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoTryon from "@/assets/titre-tryon.png";
+import GoogleTranslateButton from "@/components/GoogleTranslateButton";
 
 const navLinks = [
   { hash: "#accueil", label: "Accueil" },
@@ -61,6 +62,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <GoogleTranslateButton />
         </div>
 
         <button
@@ -76,7 +78,7 @@ const Navbar = () => {
 
       {isOpen ? (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
-          <div className="px-4 py-4 space-y-2">
+          <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.hash}
@@ -91,6 +93,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <GoogleTranslateButton className="w-full justify-center" size="lg" />
           </div>
         </div>
       ) : null}

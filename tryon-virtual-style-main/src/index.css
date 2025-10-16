@@ -119,3 +119,14 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+#google_translate_element,
+.goog-te-banner-frame.skiptranslate,
+.goog-logo-link,
+.goog-te-gadget {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
