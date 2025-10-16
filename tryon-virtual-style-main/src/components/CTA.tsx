@@ -18,12 +18,16 @@ const CTA = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <Button variant="cta" size="xl" className="w-full sm:w-auto">
-            S'inscrire dès maintenant
-            <ArrowRight className="w-5 h-5" />
+          <Button variant="cta" size="xl" className="w-full sm:w-auto" asChild>
+            <a href="mailto:contact@tryon.com?subject=Demande%20d%27inscription%20TryOn">
+              S'inscrire dès maintenant
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </Button>
-          <Button variant="outline" size="xl" className="w-full sm:w-auto">
-            Demander une démo
+          <Button variant="outline" size="xl" className="w-full sm:w-auto" asChild>
+            <a href="mailto:contact@tryon.com?subject=Demande%20de%20d%C3%A9mo%20TryOn">
+              Demander une démo
+            </a>
           </Button>
         </div>
         
