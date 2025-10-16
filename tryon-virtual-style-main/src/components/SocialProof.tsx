@@ -39,11 +39,11 @@ const SocialProof = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {stats.map((stat, index) => {
+          {stats.map((stat) => {
             const Icon = stat.icon;
             return (
-              <div 
-                key={index}
+              <div
+                key={stat.label}
                 className="relative p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex flex-col items-center text-center space-y-4">

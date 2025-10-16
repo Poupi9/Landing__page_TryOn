@@ -10,9 +10,11 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto text-center space-y-12">
         {/* Logo */}
         <div className="flex justify-center mb-8 animate-fade-in">
-          <img 
-            src={logoTryon} 
-            alt="TryOn" 
+          <img
+            src={logoTryon}
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
             className="h-24 md:h-32 object-contain"
           />
         </div>
@@ -35,11 +37,15 @@ const Hero = () => {
         
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-          <Button variant="hero" size="xl" className="w-full sm:w-auto">
-            S'inscrire dès maintenant
+          <Button variant="hero" size="xl" className="w-full sm:w-auto" asChild>
+            <a href="#contact">
+              S'inscrire dès maintenant
+            </a>
           </Button>
-          <Button variant="outline" size="xl" className="w-full sm:w-auto">
-            Voir la démo
+          <Button variant="outline" size="xl" className="w-full sm:w-auto" asChild>
+            <a href="#fonctionnalites">
+              Voir la démo
+            </a>
           </Button>
         </div>
         
