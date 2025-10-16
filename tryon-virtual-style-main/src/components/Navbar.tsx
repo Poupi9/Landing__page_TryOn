@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoTryon from "@/assets/titre-tryon.png";
 
 const navLinks = [
-  { href: "#accueil", label: "Accueil" },
-  { href: "#fonctionnalites", label: "Fonctionnalités" },
-  { href: "#temoignages", label: "Témoignages" },
-  { href: "#avantages", label: "Avantages" },
-  { href: "#contact", label: "Contact", isPrimary: true }
+  { hash: "#accueil", label: "Accueil" },
+  { hash: "#fonctionnalites", label: "Fonctionnalités" },
+  { hash: "#temoignages", label: "Témoignages" },
+  { hash: "#avantages", label: "Avantages" },
+  { hash: "#contact", label: "Contact", isPrimary: true }
 ] as const;
 
 const Navbar = () => {
@@ -31,23 +32,25 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-        <a
-          href="#accueil"
+        <Link
+          to="/"
           className="flex items-center gap-3 text-lg font-semibold text-foreground"
         >
           <img
             src={logoTryon}
-            alt="TryOn"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
             className="h-9 w-auto object-contain md:h-10"
           />
           <span className="sr-only">Aller à l'accueil TryOn</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
+            <Link
+              key={link.hash}
+              to={{ pathname: "/", hash: link.hash }}
               onClick={handleLinkClick}
               className={`text-sm font-medium transition-colors ${
                 link.isPrimary
@@ -56,7 +59,7 @@ const Navbar = () => {
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -75,9 +78,9 @@ const Navbar = () => {
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <Link
+                key={link.hash}
+                to={{ pathname: "/", hash: link.hash }}
                 onClick={handleLinkClick}
                 className={`block rounded-lg px-4 py-2 text-base font-medium transition-colors ${
                   link.isPrimary
@@ -86,7 +89,7 @@ const Navbar = () => {
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

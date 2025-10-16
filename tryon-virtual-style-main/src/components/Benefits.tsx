@@ -38,11 +38,11 @@ const Benefits = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => {
+          {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
-              <div 
-                key={index}
+              <div
+                key={benefit.title}
                 className="group p-8 rounded-2xl bg-card border border-border hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
