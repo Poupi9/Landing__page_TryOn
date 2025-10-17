@@ -61,12 +61,6 @@ const SocialProof = () => {
             );
           })}
         </div>
-        
-        <div className="mt-12 text-center">
-          <p className="text-lg font-semibold text-foreground">
-            Une technologie testée, validée et déjà approuvée par nos utilisateurs.
-          </p>
-        </div>
       </div>
     </section>
   );
