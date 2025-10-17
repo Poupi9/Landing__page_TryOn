@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
           <Button variant="hero" size="xl" className="w-full sm:w-auto" asChild>
             <a href="#contact">
-              S'inscrire dès maintenant
+              AACtiver mon essai gratuit 15 jours
             </a>
           </Button>
           <Button variant="outline" size="xl" className="w-full sm:w-auto" asChild>

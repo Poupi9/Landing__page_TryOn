@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoTryon from "@/assets/titre-tryon.png";
-import GoogleTranslateButton from "@/components/GoogleTranslateButton";
 
 const navLinks = [
   { hash: "#accueil", label: "Accueil" },
@@ -62,7 +61,6 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <GoogleTranslateButton />
         </div>
 
         <button
@@ -93,7 +91,6 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <GoogleTranslateButton className="w-full justify-center" size="lg" />
           </div>
         </div>
       ) : null}

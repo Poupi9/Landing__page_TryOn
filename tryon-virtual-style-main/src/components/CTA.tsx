@@ -20,7 +20,7 @@ const CTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
           <Button variant="cta" size="xl" className="w-full sm:w-auto" asChild>
             <a href="mailto:contact@tryon.com?subject=Demande%20d%27inscription%20TryOn">
-              S'inscrire dès maintenant
+              AACtiver mon essai gratuit 15 jours
               <ArrowRight className="w-5 h-5" />
             </a>
           </Button>
