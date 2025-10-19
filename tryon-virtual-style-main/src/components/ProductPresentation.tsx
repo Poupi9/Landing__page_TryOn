@@ -1,60 +1,48 @@
-import { Sparkles } from "lucide-react";
-
 const ProductPresentation = () => {
   return (
     <section
-      id="fonctionnalites"
-      className="py-20 px-4 bg-background scroll-mt-24"
+      id="experience"
+      className="bg-brand-bg px-4 py-24"
     >
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium">
-            <Sparkles className="w-5 h-5" />
-            <span>Une intégration ultra-simple</span>
-          </div>
-          
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-            Un plugin léger, un impact puissant
-          </h2>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            TryOn s'intègre en quelques minutes sur votre boutique en ligne. 
-            Un simple bouton <span className="font-semibold text-accent">"ESSAYER"</span> sur 
-            chaque fiche produit permet à vos clients de se visualiser directement avec vos vêtements, 
-            où qu'ils soient.
+      <div className="max-w-6xl mx-auto grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="space-y-6">
+          <h2>Une expérience qui respecte votre identité.</h2>
+          <p className="text-brand-muted text-xl">
+            Le try-on s’intègre sans bruit. Vos clients se voient, vous convertissez — sans dénaturer votre marque.
+            Notre équipe ajuste l’interface pour épouser vos guidelines et vos parcours.
           </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 pt-12">
-            <div className="p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                <span className="text-2xl">⚡</span>
+          <ul className="space-y-4 text-brand-muted">
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-accent" aria-hidden="true" />
+              <div>
+                <p className="font-medium text-brand-text">Widget épuré, fond clair</p>
+                <p>Respecte vos palettes existantes et se fond dans vos templates.</p>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Installation rapide</h3>
-              <p className="text-muted-foreground text-sm">
-                Intégration en moins de 5 minutes sur votre site e-commerce
-              </p>
-            </div>
-            
-            <div className="p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 mx-auto">
-                <span className="text-2xl">🎯</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-accent" aria-hidden="true" />
+              <div>
+                <p className="font-medium text-brand-text">Parcours pensé pour la conversion</p>
+                <p>Bouton d’essayage contextuel, fiche produit préservée, analytics intégrés.</p>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Précision IA</h3>
-              <p className="text-muted-foreground text-sm">
-                Notre moteur IA offre un rendu réaliste et personnalisé
-              </p>
-            </div>
-            
-            <div className="p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                <span className="text-2xl">📱</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-accent" aria-hidden="true" />
+              <div>
+                <p className="font-medium text-brand-text">Accompagnement clé en main</p>
+                <p>Onboardings courts, SLA premium, support multilingue pour vos équipes.</p>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Multi-plateforme</h3>
-              <p className="text-muted-foreground text-sm">
-                Compatible desktop, mobile et tablette pour tous vos clients
-              </p>
-            </div>
-          </div>
+            </li>
+          </ul>
+        </div>
+
+        <div className="relative overflow-hidden rounded-[1.25rem] border border-brand-neutral bg-white shadow-[var(--shadow-soft)]">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+            alt="Visualisation d’une cliente utilisant le service d’essayage TryOn"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
         </div>
       </div>
     </section>

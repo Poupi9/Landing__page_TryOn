@@ -1,61 +1,50 @@
-import { TrendingDown, Heart, Sparkles } from "lucide-react";
+import { TrendingUp, Package, PlugZap } from "lucide-react";
 
 const Benefits = () => {
   const benefits = [
     {
-      icon: TrendingDown,
-      title: "Réduction des retours",
-      description: "Diminuez significativement les retours clients liés aux problèmes de taille et d'ajustement.",
-      gradient: "from-accent/20 to-accent/5"
+      icon: TrendingUp,
+      title: "+ Conversion",
+      description: "L’essayage rassure vos clients et fluidifie la décision d’achat en quelques secondes."
     },
     {
-      icon: Heart,
-      title: "Satisfaction client optimale",
-      description: "Améliorez l'expérience d'achat et le taux de conversion grâce à la visualisation en temps réel.",
-      gradient: "from-primary/20 to-primary/5"
+      icon: Package,
+      title: "– Retours",
+      description: "Moins d’hésitation, moins de retours. Les clients voient la coupe et la taille qui leur correspond."
     },
     {
-      icon: Sparkles,
-      title: "Innovation différenciante",
-      description: "Démarquez-vous de la concurrence avec une expérience shopping immersive et moderne.",
-      gradient: "from-accent/20 to-primary/5"
+      icon: PlugZap,
+      title: "Plug & Play",
+      description: "Compatible Shopify, Magento, CommerceTools. Intégration API ou plugin, selon vos besoins."
     }
   ];
 
   return (
     <section
-      id="avantages"
-      className="py-20 px-4 bg-background scroll-mt-24"
+      id="benefices"
+      className="bg-brand-bg px-4 py-24"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Pourquoi c'est bon pour vous ?
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Des avantages business concrets qui transforment votre boutique en ligne
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <h2>Moins d’hésitation, moins de retours.</h2>
+          <p className="mt-4 text-brand-muted">
+            Les bénéfices TryOn se mesurent rapidement : conversions en hausse, retours en baisse, satisfaction durable.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
+
+        <div className="grid gap-8 md:grid-cols-3">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={benefit.title}
-                className="group p-8 rounded-2xl bg-card border border-border hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="flex h-full flex-col gap-4 rounded-[1.25rem] border border-brand-neutral bg-white/70 p-8 shadow-[var(--shadow-soft)] transition duration-200 hover:translate-y-[-4px]"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-8 h-8 text-primary" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-brand-neutral bg-brand-bg text-brand-muted">
+                  <Icon className="h-5 w-5" />
                 </div>
-                
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  {benefit.title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  {benefit.description}
-                </p>
+                <h3 className="text-2xl font-semibold text-brand-text">{benefit.title}</h3>
+                <p className="text-brand-muted">{benefit.description}</p>
               </div>
             );
           })}
