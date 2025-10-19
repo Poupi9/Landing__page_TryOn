@@ -11,6 +11,13 @@ All colors MUST be HSL.
     --background: 45 20% 96%;
     --foreground: 0 0% 8%;
 
+    --brand-bg: 45 20% 96%;
+    --brand-text: 0 0% 8%;
+    --brand-accent: 221 40% 29%;
+    --brand-accent2: 6 38% 47%;
+    --brand-neutral: 43 11% 87%;
+    --brand-muted: 0 0% 21%;
+
     --card: 45 20% 96%;
     --card-foreground: 0 0% 8%;
 
@@ -37,12 +44,19 @@ All colors MUST be HSL.
     --ring: 221 40% 29%;
 
     --radius: 1rem;
-    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.06);
+    --shadow-soft: 0 6px 18px hsla(0 0% 0% / 0.06);
   }
 
   .dark {
     --background: 0 0% 6%;
     --foreground: 45 20% 96%;
+
+    --brand-bg: 0 0% 6%;
+    --brand-text: 45 20% 96%;
+    --brand-accent: 221 40% 46%;
+    --brand-accent2: 6 38% 54%;
+    --brand-neutral: 0 0% 18%;
+    --brand-muted: 0 0% 40%;
 
     --card: 0 0% 8%;
     --card-foreground: 45 20% 96%;
@@ -101,13 +115,3 @@ All colors MUST be HSL.
   }
 }
 
-#google_translate_element,
-.goog-te-banner-frame.skiptranslate,
-.goog-logo-link,
-.goog-te-gadget {
-  display: none !important;
-}
-
-body {
-  top: 0 !important;
-}

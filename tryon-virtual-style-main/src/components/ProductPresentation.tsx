@@ -1,3 +1,6 @@
+const productImageBase = "https://images.unsplash.com/photo-1542291026-7eec264c27ff";
+const productImageParams = "auto=format&fit=crop";
+
 const ProductPresentation = () => {
   return (
     <section
@@ -38,7 +41,9 @@ const ProductPresentation = () => {
 
         <div className="relative overflow-hidden rounded-[1.25rem] border border-brand-neutral bg-white shadow-[var(--shadow-soft)]">
           <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+            src={`${productImageBase}?${productImageParams}&w=1200&q=80`}
+            srcSet={`${productImageBase}?${productImageParams}&w=640&q=80 640w, ${productImageBase}?${productImageParams}&w=960&q=80 960w, ${productImageBase}?${productImageParams}&w=1200&q=80 1200w`}
+            sizes="(min-width: 1024px) 42vw, 90vw"
             alt="Visualisation d’une cliente utilisant le service d’essayage TryOn"
             loading="lazy"
             className="h-full w-full object-cover"

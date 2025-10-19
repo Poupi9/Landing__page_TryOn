@@ -1,4 +1,5 @@
-const demoImageUrl = "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1600&q=80";
+const demoImageBase = "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab";
+const demoImageParams = "auto=format&fit=crop";
 
 const DemoSection = () => {
   return (
@@ -15,7 +16,9 @@ const DemoSection = () => {
         </div>
         <div className="overflow-hidden rounded-[1.5rem] border border-brand-neutral bg-white shadow-[var(--shadow-soft)]">
           <img
-            src={demoImageUrl}
+            src={`${demoImageBase}?${demoImageParams}&w=1600&q=80`}
+            srcSet={`${demoImageBase}?${demoImageParams}&w=800&q=80 800w, ${demoImageBase}?${demoImageParams}&w=1200&q=80 1200w, ${demoImageBase}?${demoImageParams}&w=1600&q=80 1600w`}
+            sizes="(min-width: 1024px) 66vw, 100vw"
             alt="Aperçu du module TryOn sur une fiche produit e-commerce"
             loading="lazy"
             className="w-full object-cover"

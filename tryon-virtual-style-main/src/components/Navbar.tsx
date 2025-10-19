@@ -6,10 +6,11 @@ import logoTryon from "@/assets/titre-tryon.png";
 const navLinks = [
   { hash: "#accueil", label: "Accueil" },
   { hash: "#experience", label: "Intégration" },
+  { hash: "#demonstration", label: "Démo produit" },
   { hash: "#benefices", label: "Bénéfices" },
   { hash: "#preuves", label: "Références" },
   { hash: "#technologie", label: "Technologie" },
-  { hash: "#contact", label: "Contact", isPrimary: true }
+  { hash: "#contact", label: "Contact", isPrimary: true },
 ] as const;
 
 const Navbar = () => {
@@ -26,8 +27,17 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (hash: string) => {
     setIsOpen(false);
+
+    if (typeof window === "undefined" || typeof document === "undefined") {
+      return;
+    }
+
+    if (window.location.hash === hash) {
+      const target = document.querySelector(hash);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -52,7 +62,7 @@ const Navbar = () => {
             <Link
               key={link.hash}
               to={{ pathname: "/", hash: link.hash }}
-              onClick={handleLinkClick}
+              onClick={() => handleLinkClick(link.hash)}
               className={`text-sm font-medium transition-colors ${
                 link.isPrimary
                   ? "px-4 py-2 rounded-full bg-brand-accent text-brand-bg shadow-sm hover:bg-[#233455]"
@@ -82,7 +92,7 @@ const Navbar = () => {
               <Link
                 key={link.hash}
                 to={{ pathname: "/", hash: link.hash }}
-                onClick={handleLinkClick}
+                onClick={() => handleLinkClick(link.hash)}
                 className={`block rounded-lg px-4 py-2 text-base font-medium transition-colors ${
                   link.isPrimary
                     ? "bg-brand-accent text-brand-bg hover:bg-[#233455]"
