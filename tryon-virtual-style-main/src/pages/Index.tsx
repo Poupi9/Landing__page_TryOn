@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProductPresentation from "@/components/ProductPresentation";
 import SocialProof from "@/components/SocialProof";
+import DemoSection from "@/components/DemoSection";
 import Benefits from "@/components/Benefits";
+import TechSection from "@/components/TechSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -14,7 +16,9 @@ const Index = () => {
         <Hero />
         <ProductPresentation />
         <SocialProof />
+        <DemoSection />
         <Benefits />
+        <TechSection />
         <CTA />
       </main>
       <Footer />

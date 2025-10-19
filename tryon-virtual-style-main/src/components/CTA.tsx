@@ -1,38 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 const CTA = () => {
   return (
     <section
       id="contact"
-      className="py-20 px-4 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 scroll-mt-24"
+      className="border-t border-brand-neutral bg-[#FAF9F7] px-4 py-24"
     >
-      <div className="max-w-4xl mx-auto text-center space-y-8">
-        <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-          Prêt à transformer votre boutique ?
-        </h2>
-        
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Rejoignez les marques innovantes qui révolutionnent l'expérience d'achat 
-          de leurs clients avec TryOn.
+      <div className="mx-auto max-w-3xl space-y-8 text-center">
+        <h2>Essayez TryOn. Pour une expérience qui se voit — et qui se ressent.</h2>
+        <p className="text-brand-muted">
+          Contactez-nous pour planifier une démonstration personnalisée et bâtir un pilote sur vos collections phares.
         </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <Button variant="cta" size="xl" className="w-full sm:w-auto" asChild>
-            <a href="mailto:contact@tryon.com?subject=Demande%20d%27inscription%20TryOn">
-              AACtiver mon essai gratuit 15 jours
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </Button>
-          <Button variant="outline" size="xl" className="w-full sm:w-auto" asChild>
-            <a href="mailto:contact@tryon.com?subject=Demande%20de%20d%C3%A9mo%20TryOn">
-              Demander une démo
-            </a>
+        <div className="flex justify-center">
+          <Button size="xl" asChild>
+            <a href="mailto:contact@tryon.com?subject=Demande%20de%20d%C3%A9mo%20TryOn">Demander une démo</a>
           </Button>
         </div>
-        
-        <p className="text-sm text-muted-foreground pt-4">
-          🚀 Installation en moins de 5 minutes • Sans engagement • Support dédié
+        <p className="text-sm text-brand-muted">
+          Réponse sous 24 h ouvrées • Hébergement UE • Accompagnement dédié onboarding
         </p>
       </div>
     </section>

@@ -1,65 +1,43 @@
-import { Users, Zap, Cpu } from "lucide-react";
+const logos = ["Maison Alba", "Nordik Studio", "Atelier Lune", "Éclat Paris", "Linea"]; // Marques fictives en niveau de gris
 
 const SocialProof = () => {
   const stats = [
-    {
-      icon: Users,
-      value: "+238",
-      label: "testeurs engagés",
-      color: "text-primary"
-    },
-    {
-      icon: Zap,
-      value: "+382",
-      label: "essayages générés",
-      color: "text-accent"
-    },
-    {
-      icon: Cpu,
-      value: "+1",
-      label: "moteur IA sélectionné",
-      color: "text-primary"
-    }
+    { value: "+18%", label: "de conversion en moyenne" },
+    { value: "-32%", label: "de retours produits" },
+    { value: "10 jours", label: "pour une mise en ligne complète" }
   ];
 
   return (
     <section
-      id="temoignages"
-      className="py-20 px-4 bg-gradient-to-b from-secondary/30 to-background scroll-mt-24"
+      id="preuves"
+      className="bg-brand-bg px-4 py-24"
     >
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Une technologie testée et validée
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Déjà approuvée par nos utilisateurs, notre solution révolutionne 
-            l'expérience d'achat en ligne.
+      <div className="max-w-6xl mx-auto space-y-16">
+        <div className="text-center space-y-4">
+          <h2>Ils privilégient TryOn pour sa discrétion.</h2>
+          <p className="mx-auto max-w-2xl text-brand-muted">
+            Marques premium, DNVB et maisons patrimoniales nous confient leur expérience digitale pour allier précision et respect de l’esthétique.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {stats.map((stat) => {
-            const Icon = stat.icon;
-            return (
-              <div
-                key={stat.label}
-                className="relative p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className={`p-4 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 ${stat.color}`}>
-                    <Icon className="w-8 h-8" />
-                  </div>
-                  <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    {stat.value}
-                  </div>
-                  <p className="text-muted-foreground font-medium">
-                    {stat.label}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+
+        <div className="flex flex-wrap items-center justify-center gap-10 text-brand-muted uppercase tracking-[0.3em] text-xs">
+          {logos.map((logo) => (
+            <span key={logo} className="text-brand-muted/60">
+              {logo}
+            </span>
+          ))}
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-[1.25rem] border border-brand-neutral bg-white/80 px-8 py-10 text-center shadow-[var(--shadow-soft)]"
+            >
+              <div className="text-4xl font-semibold text-brand-text">{stat.value}</div>
+              <p className="mt-3 text-brand-muted">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
