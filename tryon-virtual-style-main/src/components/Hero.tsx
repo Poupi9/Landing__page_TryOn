@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 
+const heroImageBase = "https://images.unsplash.com/photo-1545239351-1141bd82e8a6";
+const heroImageParams = "auto=format&fit=crop";
+
 const Hero = () => {
   return (
     <section
@@ -34,7 +37,9 @@ const Hero = () => {
           {/* Image réaliste pour ancrer le produit dans un univers premium */}
           <div className="relative overflow-hidden rounded-[1.25rem] border border-brand-neutral bg-white shadow-[var(--shadow-soft)]">
             <img
-              src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80"
+              src={`${heroImageBase}?${heroImageParams}&w=1200&q=80`}
+              srcSet={`${heroImageBase}?${heroImageParams}&w=640&q=80 640w, ${heroImageBase}?${heroImageParams}&w=960&q=80 960w, ${heroImageBase}?${heroImageParams}&w=1200&q=80 1200w`}
+              sizes="(min-width: 1024px) 50vw, 90vw"
               alt="Interface TryOn intégrée sur une fiche produit sobre"
               loading="lazy"
               className="h-full w-full object-cover"

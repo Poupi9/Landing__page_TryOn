@@ -21,12 +21,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         brand: {
-          bg: "#F7F6F3",
-          text: "#141414",
-          accent: "#2C3E66",
-          accent2: "#A5534A",
-          neutral: "#E2E0DB",
-          muted: "#363636",
+          bg: "hsl(var(--brand-bg))",
+          text: "hsl(var(--brand-text))",
+          accent: "hsl(var(--brand-accent))",
+          accent2: "hsl(var(--brand-accent2))",
+          neutral: "hsl(var(--brand-neutral))",
+          muted: "hsl(var(--brand-muted))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
