@@ -36,6 +36,20 @@ npm i
 npm run dev
 ```
 
+> [!IMPORTANT]
+> This project is powered by [Vite](https://vitejs.dev/) and cannot be served correctly by static file servers such as the VS Code **Live Server** extension.
+> Opening `index.html` directly (or via Live Server) will only show a directory listing because the browser cannot execute the TypeScript entry point at `src/main.tsx`.
+
+To preview the application locally you must let Vite compile the code:
+
+```sh
+npm run dev        # start the development server at http://localhost:5173
+npm run build      # create an optimized production build in dist/
+npm run preview    # serve the production build locally
+```
+
+If you prefer a static preview, run `npm run build` and then `npm run preview`; this spins up a small Vite server that serves the contents of the `dist/` folder without requiring any additional configuration.
+
 **Edit a file directly in GitHub**
 
 - Navigate to the desired file(s).
